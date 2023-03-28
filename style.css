@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#content {
+  /* border: 2px solid; */
+  /* position: relative; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.left {
+  /* border: 2px solid; */
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background: url(./Assets/ps.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.left::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+/* .left:hover {
+  width: 70%;
+  transition: 8000ms ease-out 3s;
+} */
+
+.left button:hover {
+  border-color: rgba(87, 84, 236, 1);
+  background-color: rgba(87, 84, 236, 1);
+}
+
+.right {
+  /* border: 2px solid; */
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background: url(./Assets/img-xbox.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.8);
+
+}
+
+/* .right:hover {
+  width: 70%;
+  transition: 8000ms ease-out 3s;
+} */
+
+.right,
+.left,
+.right::before,
+.left::before {
+  transition: all 1000ms ease-in-out;
+}
+
+.right button:hover {
+  border-color: rgba(28, 122, 28, 1);
+  background-color: rgba(28, 122, 28, 1);
+}
+
+button {
+  border: 2px solid #fff;
+  position: absolute;
+  top: 29rem;
+  height: 6rem;
+  width: 18rem;
+  background: none;
+  color: #fff;
+}
+
+h1 {
+  position: absolute;
+  top: 16rem;
+  font-size: 4.3rem;
+  color: #fff;
+}
+
+@media (max-width: 825px) {
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  /* .left:hover {
+    width: 100%;
+    height: 75%;
+    transition: 1s;
+  } */
+
+  .right {
+    width: 100%;
+  }
+
+  /* .right:hover {
+    width: 100%;
+    height: 75%;
+    transition: 1s;
+  } */
+
+  h1 {
+    top: 5rem;
+  }
+  
+  button {
+    top: 15rem;
+  }
+}
+
+
+

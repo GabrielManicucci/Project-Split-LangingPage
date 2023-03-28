@@ -15,20 +15,16 @@ body {
 }
 
 #content {
-  /* border: 2px solid; */
-  /* position: relative; */
   width: 100vw;
   height: 100vh;
   display: flex;
 }
 
 .left {
-  /* border: 2px solid; */
   position: relative;
   width: 50%;
   height: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   background: url(./Assets/ps.jpg);
   background-size: cover;
@@ -42,23 +38,16 @@ body {
   background-color: rgba(87, 84, 236, 0.7);
 }
 
-/* .left:hover {
-  width: 70%;
-  transition: 8000ms ease-out 3s;
-} */
-
 .left button:hover {
   border-color: rgba(87, 84, 236, 1);
   background-color: rgba(87, 84, 236, 1);
 }
 
 .right {
-  /* border: 2px solid; */
   position: relative;
   width: 50%;
   height: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   background: url(./Assets/img-xbox.jpg);
   background-size: cover;
@@ -70,13 +59,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(43, 43, 43, 0.8);
-
 }
-
-/* .right:hover {
-  width: 70%;
-  transition: 8000ms ease-out 3s;
-} */
 
 .right,
 .left,
@@ -117,21 +100,9 @@ h1 {
     width: 100%;
   }
 
-  /* .left:hover {
-    width: 100%;
-    height: 75%;
-    transition: 1s;
-  } */
-
   .right {
     width: 100%;
   }
-
-  /* .right:hover {
-    width: 100%;
-    height: 75%;
-    transition: 1s;
-  } */
 
   h1 {
     top: 5rem;

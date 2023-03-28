@@ -4,9 +4,7 @@ const mainDiv = document.getElementById('content')
 
 splitLeft.addEventListener("mouseenter", event => {
 
-  setDimensions()
-  
-  if (getX(mainDiv) <= 825) {
+  if (getWidth(mainDiv) <= 825) {
     splitLeft.style.height = "73%"
     splitRight.style.height = "27%"
   } else {
@@ -17,9 +15,7 @@ splitLeft.addEventListener("mouseenter", event => {
 
 splitRight.addEventListener("mouseenter", event => {
 
-  setDimensions()
-
-  if (getX(mainDiv) <= 825) {
+  if (getWidth(mainDiv) <= 825) {
     splitRight.style.height = "73%"
     splitLeft.style.height = "27%"
   } else {
@@ -28,33 +24,26 @@ splitRight.addEventListener("mouseenter", event => {
   }
 })
 
-// mainDiv.addEventListener("click", event => {
-//   if (getX(mainDiv) <= 825) {
-//     splitLeft.style.height = '50%'
-//     splitRight.style.height = '50%'
-//   }
-// })
-
-function getX(split) {
+function getWidth(split) {
   const widthSplit = parseInt(split.clientWidth)
   return widthSplit
 }
 
-function getY(split) {
+function getHeight(split) {
   const heightSplit = parseInt(split.clientHeight)
   return heightSplit
 }
 
 function setDimensions() {
-  if (getX(mainDiv) >= 825) {
+  if (getWidth(mainDiv) >= 825) {
+    // console.log(getX(mainDiv))
     splitLeft.style.height = '100%'
     splitRight.style.height = '100%'
-  } else if(getX(mainDiv) <= 825) {
-    splitLeft.style.height = '50%'
-    splitRight.style.height = '50%'
+  } else if(getWidth(mainDiv) <= 825) {
+    // console.log(getX(mainDiv))
+    splitLeft.style.width = '100%'
+    splitRight.style.width = '100%'
   }
 }
 
-console.log(getX(splitLeft))
-console.log(getX(splitRight))
-console.log(getX(mainDiv))
+setInterval(setDimensions, 1300)
